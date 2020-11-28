@@ -1,0 +1,78 @@
+/* partie html */
+<div class="slider">
+      <figure>
+        <img src="PhotoSiteWeb/NewSlider1.jpg"/>
+        <p class="titreSlider" id="titre1" >Profitez de nos tarifs dégressifs !</p>
+        <img src="PhotoSiteWeb/NewSlider2.jpg"/>
+        <p class="titreSlider" id="titre2">Découvrez bientôt nos nouvelles missions !</p>
+        <img src="PhotoSiteWeb/NewSlider3.jpg"/>
+        <p class="titreSlider" id="titre3">Créer votre propre évènement chez nous !</p>
+      </figure>
+ </div>
+
+
+/* Style slider de la page partie css*/
+
+.slider{
+  overflow: hidden;
+  z-index: -1;
+  border: 5px solid grey;
+}
+.slider figure{
+  position: relative;
+  width: 300%;
+  margin: 0;
+  left: 0;
+  animation: glisse 10s infinite;
+  z-index: -1;
+}
+.slider figure img{
+  width: 33.33333%;
+  float: left;
+  z-index: -1;
+}
+.titreSlider{
+  max-width: 800px;
+  font-size: 25px;
+  position: absolute;
+  padding: 10px 10px;
+  background: rgba(128, 128, 128, 0.5);
+  border-radius: 4px;
+  color: white;
+  font-family: sans-serif;
+}
+#titre1{
+  margin-left: 12%;
+}
+#titre2{
+  margin-left: 45%;
+}
+#titre3{
+  margin-left: 78%;
+}
+@keyframes glisse {
+  0%{
+    transform: translateX(0);
+  }
+  30%{
+    transform: translateX(0);
+  }
+  33%{
+    transform: translateX(-33.333%);
+  }
+
+  63%{
+    transform: translateX(-33.333%);
+  }
+  66%{
+    transform: translateX(-66.666%);
+  }
+
+  96%{
+    transform: translateX(-66.666%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+
+}

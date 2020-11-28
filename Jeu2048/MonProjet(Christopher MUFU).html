@@ -1,0 +1,251 @@
+<html lang="fr" dir="ltr">
+
+  <head>
+      <meta charset="utf-8"/>
+      <link rel="stylesheet" href="MonStyle(Christopher MUFU).css"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <title>I Love 2048</title>
+  </head>
+
+  <body>
+
+<!-- Haut de la page contenant le logo et le menu -->
+
+    <header class="hautPage">
+
+        <div class="logo">
+            <a  href="Accueil(Christopher MUFU).html"><h1>I Love 2048</h1></a>
+        </div>
+
+        <nav class="menu">
+            <div class="elementMenu">
+                <a href="Accueil(Christopher MUFU).html"><h3>Accueil</h3></a>
+            </div>
+            <div class="elementMenu">
+                <a href="Règles(Christopher MUFU).html"><h3>Règles du jeu</h3></a>
+            </div>
+            <div class="elementMenu">
+                <a href="DeuxMilleQuaranteHuit(Christopher MUFU).zip" download><h3>Télécharger</h3></a>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <!-- Contenu de la page -->
+
+        <div class="contenuTextuel">
+
+            <h1>Développer le jeu</h1>
+
+            <p class="ligne"></p>
+
+            <p class="texte">
+                Vous êtes amateur en programmation et vous souhaitez vous aussi faire votre jeu du 2048,
+                cette page est faite pour vous ! Nous vous expliquerons comment nous avons réalisé notre
+                propre jeu du 2048 afin que puissiez vous faire une idée concrète de la démarche à suivre.
+                Mais avant de commencer, nous tenons à préciser que la méthode que nous allons énoncée n'est
+                pas la méthode de reférence mais seulement une des solutions possibles à la réalisation du
+                2048. Il est possible que vous puissiez trouver d'autres techniques d'approches donnant
+                le même résultat, l'important est de comprendre les étapes de notre démarche pour que
+                vous puissiez avoir un cadre sur lequel débuter la réalisation de votre jeu en toute
+                sérénité. Sur ce, trève de blabla prenez une feuille et un stylo car il est temps de
+                prendre note.
+            </p>
+
+
+            <h2>Construction de la logique du jeu</h2>
+
+            <p class="texte">
+                Avant de se lancer dans l'écriture d'une centaines de lignes de code, il serait plus judicieux
+                de refléchir à comment est construit la logique du jeu du 2048 et comment on pourra le reproduire à
+                travers le code. Une très bonne connaissance des règles du jeu vous sera nécessaire, il vous faudra
+                répertorier les différentes cas de figure que l'on peut retrouver dans le jeu, pour cela jouer au jeu
+                de manière attentif peut s'avérer très efficace. Une fois cette partie terminée, il vous faudra
+                refléchir au code permettant de combler toutes les situations que vous avez répertorié.
+                Vous verrez que juste en excutant cette manière de procéder, vous gagnerez un temps considérable sur
+                la réalisation du jeu par rapport à directement passer au code.<br><br><br>
+
+
+                Nous vous proposons désormais la structure du code auquel nous avons refléchi pour la réalisation
+                de la logique du jeu du 2048. Nous avons divisé notre code en trois cas principaux, le cas ou la case
+                étudiée se trouve aux extrémités de la grille de jeu, le cas ou la case étudiée se trouve juste à coté
+                d'une case remplie étant dans son sens de mouvement et pour finir le cas ou la case étudiée se trouve
+                juste à coté d'une case vide étant dans son sens de mouvement.<br><br><br>
+
+
+                Pour premier le cas nous avons tout simplement établi que si la case étudiée est située à l'extrémiter de
+                son sens de mouvement, et bien la case étudiée reste dans son extrémité et ne subit pas de
+                modifications. Ce code nécessite l'utilisation d'une condition <i>if</i>.<br><br>
+
+                Pour le deuxième cas nous avons établi que si la case à proximité de celle étudiée et étant dans son
+                sens de mouvement est égale exactement à la valeur de la case étudiée, alors la case à proximité s'additionne
+                avec la case étudiée pour former la puissance de deux au dessus et la case étudiée devient vide.
+                Dans le cas contraire rien ne se passe pour les deux cases.
+                Ce code nécessite l'utilisation d'une condition <i>if</i>.<br><br>
+
+                Pour le troisième cas, le plus délicat, nous avons établi que si la case à proximité de celle étudiée
+                et étant dans son sens de mouvement est vide, alors il nous faut vérifer un par un si les autres cases
+                issues du même sens de mouvement de la case étudiée son également vide. Si nous obtenons au final que
+                les autres cases sont elles aussi vide, alors la case à l'extrémité du sens de mouvement prendra la valeur
+                de la case étudiée et la case étudiée devient vide. Dans le cas ou l'on trouve qu'une case est remplie,
+                il nous faut procédé à la vérification issue du deuxième cas. C'est à dire si la case étudiée est égale
+                à la case remplie alors la valeur de la case remplie s'additionne avec la valeur case étudiée
+                et la case étudiée devient vide. Dans l'autre cas, la valeur case étudiée va être transférée à la case
+                à proximité de la case remplie et étant dans le sens de mouvement inverse.
+                Ce code nécessite l'utilisation d'une condition <i>if</i>, qui sera composée d'une boucle <i>while</i>
+                et de deux conditions <i>if</i> issue du deuxième cas.
+                <br><br>
+
+                La difficulté que vous pouvez retrouver avec cette méthode est le fait que les cases pourrons possiblement
+                se regrouper plusieurs fois en un seule mouvement, chose qui n'est pas possible dans le 2048. Nous avons donc
+                trouver une solution pour répondre à ce genre de problème, solution qui vous sera expliquer dans la rubrique
+                "Nos fonctions".
+            </p>
+
+
+
+            <h2>Nos fonctions</h2>
+
+            <p class="texte">
+                Nous allons désormais vous expliquer en détail les fonctions que nous avons utilisé pour la réalisation
+                de notre jeu. Nous avons défini tout d'abord la fonction <i>Init</i> ayant pour paramètre la dimension
+                de la grille qui va nous permettre d'établir la grille de départ de notre 2048 composée de 3 ou 4 valeur
+                variant entre 2 ou 4. Pour réaliser cette fonction, nous avons tout d'abord mis à vide tous les éléments
+                de la grille puis nous initialisons deux variables correspondant à l'indice de ligne et l'indice de colonne
+                grâce à un test aléatoire entre 0 et la dimension de la grille (nécessite l'importation du module randint de la bibliothèque random).
+                Ces deux indices aléatoires vont correspondre à un case spécifique de la grille. Une fois la case selectionnée,
+                nous procédons de nouveau à un autre test aléatoire avec cette fois-ci le module random à importer pour pouvoir
+                contrôler avec précision le taux d'apparition du 2 et du 4, valeurs de départ du 2048. L'utilisation d'une boucle
+                <i>while</i> ou <i>for</i> imbriquer dans une condition sera nécessaire pour la réalisation de la fonction. Il serait
+                également préférable d'intégrer au compteur de la boucle un test aléatoire entre 3 et 4 pour déterminer le nombre de cases
+                au commencement du jeu.
+                <br><br>
+
+
+                Nous avons ensuite défini la fonction <i>TestFin</i> prenant en paramètre le contenue de la grille et qui permet de prévenir
+                après chaque action du joueur si la partie est terminée ou si elle continue. Pour réaliser cette fonction,
+                nous avons établi une boucle <i>while</i> vérifiant chaque membre de la grille, dans cette boucle sera imbriquée
+                une condition <i>if</i> qui vérifie si le membre en question est vide ou non. Il faudra initialiser au préalable un compteur
+                signifant le cas ou toute les cases sont remplies également une variable pour enregister le cas ou la partie continue.
+                Si il y a existance d'une case vide alors la valeur de la variable se modifie et dans le cas contraire,
+                la valeur de la variable initialisée reste inchangée et nous rajoutons 1 au compteur. N'oubliez pas de rajouter grâce à une condition <i>elif</i>
+                le cas ou la valeur d'un des membres équivaut à 2048, signant la réussite du joueur et ainsi la fin de la partie.
+                Pour vérifier le cas d'échec, un cas le plus complexe il faut en sortant de la boucle <i>while</i> d'ajouter une autre condition <i>if</i>
+                afin de vérifier si toutes les cases sont remplies ou non à l'aide du compteur initialisé. Si le compteur correspond au nombres cases dans la grille,
+                signifiant ainsi que toutes les cases sont remplies, il faut ensuite vérifier avec une condition <i>if</i>
+                si les mouvements haut/bas et gauche/droite sont encore possible. Dans ce cas là, la partie continue et dans l'autre, cela veut dire que toutes les cases
+                sont remplies et de plus aucun mouvement est possible, et cela signe la fin de la partie. Nous verrons avec plus de détail la vérification
+                des mouvement possible avec les fonctions si dessous.
+
+                <br><br>
+
+                Egalement en lien avec la fonction <i>TestFin</i>, la fonction <i>Test</i> prenant en paramètre le contenue de la grille et permettant
+                de savoir si les mouvements haut/bas et gauche/droite sont possibles. Pour réaliser cette fonction, il suffit d'effectuer une condition <i>if</i>
+                vérifiant si il y a une modification de la grille après exécution des fonctions liées aux mouvements haut/bas et gauche/droite. La fonction enverra
+                <i>False</i> si il y a une modification (le jeu se poursuit) et <i>True</i> si il s'agit de la même chose (le jeu s'arrête). Pour le bon fonctionnement
+                de la fonction il nous faut définir les fonctions liées au mouvements possible du joueur et également bien configurer la fonction d'ajout de case,
+                chose que nous allons voir juste en bas.
+
+
+                <br><br>
+                Il nous faut ainsi définir la fonction <i>Ajout</i> prenant en paramètre le contenue de la grille et qui sert à pouvoir
+                ajouter après chaque action du joueur une nouvelle valeur de départ (2 ou 4) pour que le jeu puisse se poursuivre.
+                Pour réaliser cette fonction, nous nous sommes inspiré de la fonction <i>Init</i>, cette fois-ci nous allons répèter
+                à l'aide d'une boucle <i>while</i> le test aléatoire entre l'indice de ligne et l'indice de colonne pour ensuite
+                obtenir une case aléatoire de la grille. Puis avec une condition <i>if</i> nous testons si la case en question est vide ou non.
+                Dès que le programme trouve une case vide on exécute le second test pour déterminer la valeur de la case (2 ou 4). Aussi pour
+                que cette fonction soit en adéquation avec la fonction <i>TestFin</i> citée précédemment et ainsi qu'il ne recherche pas indéfiniment
+                une case vide, il serait judicieux d'imbriquer le contenue du programme dans une condition <i>if</i>. Cette condition vérifira tout simplement
+                si toutes les cases de la grille sont remplies, et si ce n'est pas le cas alors il réalisera la fonction.
+
+                <br><br>
+
+
+                Enfin il est temps de définir les fonctions qui seront au coeur du jeu, il s'agit des fonctions <i>ActionHaut</i>,
+                <i>ActionBas</i>, <i>ActionGauche</i> et <i>ActionDroite</i> qui font partie des mouvements autorisés par le joueur
+                pour atteindre 2048. Pour réaliser cette fonction, il vous faut bien comprendre la logique du jeu qui se cache
+                derrière le 2048. Justement notre rubrique intitulée "Construction de la logique du jeu" se trouvant juste au dessus
+                de la page explique en détail comment construire ces quatres fonctions. Ici nous allons voir les quelques éléments
+                qui vont permettre à vos fonctions de bien fonctionner. Tout abord, pour éviter les bugs d'assemblage des cases nous
+                avons réfléchi de transposer le contenue de la grille de jeu à travers un autre grille initialisée par des booléens
+                ayant la valeur <i>False</i>. Cette valeur signifie que la case en question n'a pas subit de fusion, ainsi dès qu'une fusion
+                s'opère dans la case en question, et bien la variable passe à <i>True</i>. Une fois que la case prend la valeur booléenne <i>True</i>
+                il lui est impossible de fusionner une nouvelle fois, ce qui permet de répondre à notre problème.
+                <!-- Un fois programme pour un mouv parail pour autre sauf changer lect + indice -->
+                <br><br>
+            </p>
+
+
+
+            <h2>Nos variables</h2> <!-- A faire / modifier -->
+
+            <p class="texte">
+                Vous-êtes encore là ? Pas de panique vous avez fais le plus dure ! Il est temps maintenant qu'on
+                parle des variables que nous avons utilisé pour la réalisation du jeu. L'important ici n'est
+                pas de reprendre les même variables mais de comprendre leur rôle à jouer dans le fonctionnement
+                du jeu.
+                <br><br>
+
+                Nous pouvons regrouper nos variables dans des groupes spécifique:
+                <br><br>
+
+                Nous aurons les variables qui vont être liées à la gestion des 2 versions de notre jeu.
+                Ayant utilisé un seule programme pour faire fonctionner les 2 versions (puissances de 2, Suite de Fibonacci)
+                l'utilisation de variable évite l'apparition de nombreux bugs.
+                <br>
+                (<i>val_1, val_2, val_fin, fiboVal1, fiboVal2, fiboVal3, fiboVal4 </i>)
+                <br>
+
+                Nous aurons également les variables liées à la lecture des cases, variables indispensables au fonctionnement du jeu.
+                <br>
+                (<i>i et j</i>)
+                <br>
+
+
+                Nous avons aussi les variables de tests qui ont leur importance dans certaines fonctions comme la fonction <i>TestFin</i>.
+                <br>
+                (<i>test, verif</i>)
+                <br>
+                Puis nous avons les variables de comptage, elles aussi importante dans certaines fonctions avec notamment la fonction <i>Ajout</i>.
+                (<i>compt</i>)
+                <br>
+
+                Enfin nous avons la fonction évitant les fusions à la chaine pour que le jeu soit au norme.
+                <br>
+                (<i>assembler</i>)
+                <br><br>
+
+                Voilà comment nous avons réaliser notre jeu ! J'espère que tout cela t'aura bien aidé pour la
+                réalisation de ton jeu. Si j'avais un dernier conseil à te donner c'est de ne pas te précipiter
+                dans le code ! Souvent, et j'en ai fait l'expérience, on croit avoir saisie comment réaliser le jeu
+                et donc on se lance sur le code puis on se rend compte après coups qu'on a oublié de prendre en compte
+                un élément, ce qui nous contraint de tout reprendre à zéro. N'hésitez à exterioriser vos idées et à
+                les remettre en cause. Et même si vous êtes dans la certitude d'avoir tout compris prenez tout de même
+                le temps de prendre chaque détail en considération. Croyez moi, avec ce conseil je vous évite des heures
+                de débugage ! Sur ce nous avons fait notre travail à toi de faire le tiens désormais ! Allez bon courage !
+            </p>
+
+
+        </div>
+
+
+
+
+    <!-- Bas de page -->
+
+        <footer class="basPage">
+          <div class="menuBasPage">
+            <h3>
+              <a href="Accueil(Christopher MUFU).html">Accueil</a>
+              <a href="Règles(Christopher MUFU).html">Règles du jeu</a>
+              <a href="DeuxMilleQuaranteHuit(Christopher MUFU).zip" download>Télécharger</a>
+            </h3>
+          </div>
+          <div class="copyright">
+             <p>copyright@ChristopherMufu2019</p>
+          </div>
+        </footer>
+
+      </body>
+    </html>

@@ -1,0 +1,184 @@
+body{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+/* Haut des page (logo + menu)*/
+
+.hautPage{
+  background-color: #7BD42D;
+  padding: 20px;
+}
+
+.hautPage a{
+  text-decoration: none;
+  color: white;
+  font-family: sans-serif;
+}
+
+.logo{
+  display: inline-block;
+}
+
+.menu{
+  display: flex;
+  float: right;
+  margin: 0px 20px;
+}
+
+.menu a{
+  text-transform: uppercase;
+  font-family: "montserrat", sans-serif;
+  padding: 0px 10px;
+  margin: 10px 0px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+.menu a:hover{
+  cursor: pointer;
+  color: black;
+}
+
+@media screen and (max-width: 800px){
+
+
+  .logo, .menu{
+    display: block;
+    float: none;
+    text-align: center;
+  }
+
+
+}
+
+
+
+
+
+
+/* Contenu textuel des pages*/
+
+.contenuTextuel{
+  margin: 0px 10%;
+  font-family: sans-serif;
+  color: grey;
+}
+
+.contenuTextuel h1{
+  text-align: center;
+}
+
+.contenuTextuel h2{
+  color: white;
+  border: 1px solid #7BD42D;
+  background-color: #7BD42D;
+  padding: 0px 10px;
+}
+.ligne{
+  border: 1px solid #7BD42D;
+  background-color: #7BD42D;
+  margin-bottom: 20px;
+}
+
+.texte{
+  max-width: 700px;
+  text-align: justify;
+  padding-bottom: 30px;
+  margin: 0 auto;
+}
+
+.texte i{
+  color: #589B1C;
+}
+
+
+
+
+/* Tableau d'exemple (spécifique aux règles)*/
+
+.contenuTextuel table{
+  margin: 0 auto;
+  padding-bottom: 70px;
+  padding-top: 0px;
+}
+.elementTab{
+  max-width: 700px;
+  text-align: center;
+  padding-bottom: 30px;
+  margin: 0 auto;
+}
+
+.contenuTextuel td{
+  width: 50px;
+  height: 50px;
+  background: grey;
+}
+.contenuTextuel td p{
+  text-align: center;
+  color: white;
+}
+
+
+
+
+
+
+/* Lien du sites */
+
+.texte_liens{
+  text-align: center;
+}
+
+.liens{
+  text-align: center;
+}
+
+
+
+/* Bas des pages (menu + copyright) */
+
+.basPage{
+  padding: 10px 0px;
+  margin: 0px;
+  width:100%;
+  background-color: #7BD42D;
+}
+.menuBasPage{
+  display: inline;
+  text-align: center;
+}
+
+
+.menuBasPage a{
+  font-family: sans-serif;
+  font-size: 17px;
+  padding: 0px 10px;
+  text-decoration: none;
+  color: white;
+  display: inline-flex;
+  transition: all 0.3s ease;
+}
+.menuBasPage a:hover{
+  cursor: pointer;
+  color: black;
+}
+
+.basPage p{
+  color:white;
+  text-align:center;
+}
+
+.copyright{
+  line-height: 30px;
+}
+.copyright a{
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+.copyright a:hover{
+  cursor: pointer;
+  color: black;
+}

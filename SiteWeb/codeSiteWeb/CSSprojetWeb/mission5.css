@@ -1,0 +1,313 @@
+body{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+body:before{
+  content: '';
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: url("../PhotoSiteWeb/mission5fondProjetWeb.jpg") no-repeat fixed;
+  background-position: center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.hautPage{
+  background-image: linear-gradient(to right, purple ,#2DA1D4 );
+  padding: 20px;
+  opacity: 1;
+}
+.hautPage a{
+  text-decoration: none;
+  color: white;
+  font-family: sans-serif;
+}
+
+
+
+
+.logo{
+  display: inline-flex;
+}
+.imglogo{
+  width: 110px;
+  display: inline-flex;
+  float: left;
+}
+.txtlogo{
+}
+
+
+
+.menu{
+  text-align: center;
+  line-height: 36px;
+  display: inline-flex;
+  float: right;
+  position: absolute;
+  margin: 0px 20px;
+}
+
+.menu a{
+  text-transform: uppercase;
+  font-family: "montserrat", sans-serif;
+  padding: 0px 10px;
+  margin: 10px 0px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+.menu a:hover{
+  cursor: pointer;
+  color: #2DA1D4;
+}
+
+
+.show-menu-btn,.hide-menu-btn{
+  color: white;
+  transition: 0.3s;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+
+}
+.show-menu-btn{
+  float: right;
+}
+.hide-menu-btn i{
+  line-height: 70px;
+}
+.show-menu-btn i{
+  line-height: 70px;
+
+}
+.show-menu-btn:hover{
+  color: black;
+}
+.hide-menu-btn:hover{
+  color: #2DA1D4;
+}
+#chk{
+  position: absolute;
+  visibility: hidden;
+  z-index: -1111;
+}
+
+
+@media screen and (max-width:10000px) {
+  .show-menu-btn,.hide-menu-btn{
+    display: block;
+  }
+  .menu{
+    position: fixed;
+    width: 95%;
+    height: 100vh;
+    background: #333;
+    right: -100%;
+    top: 0;
+    text-align: center;
+    padding-left: 80px 0px;
+    line-height: normal;
+    transition: 0.7s;
+    display: block;
+    padding-top: 40px;
+  }
+  .hide-menu-btn{
+    position: absolute;
+    top: 20px;
+    right: 40px;
+  }
+  #chk:checked ~ .menu{
+    right: 0;
+
+  }
+
+}
+
+
+img{
+
+
+
+}
+.contenuTextuel{
+  font-family: sans-serif;
+  color: white;
+  margin: 0px 10%;
+}
+
+
+
+.nomMission{
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 30px;
+  text-align: center;
+  background-color: rgba(78, 138, 216, 0.75);
+
+}
+
+.contenuTextuel h2{
+  padding: 0px 10px;
+  background-color: rgba(78, 138, 216, 0.75);
+}
+
+
+.infos{
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.séances{
+  width: 370px;
+  margin: 0 auto;
+  border-radius: 4px;
+  padding: 1px 10px;
+  background: rgba(128, 128, 128, 0.75);
+}
+
+
+
+.introMission{
+  background: rgba(128, 128, 128, 0.75);
+  text-align: justify;
+  border-radius: 4px;
+  padding: 10px 10px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  margin: 0 auto;
+  max-width: 800px;
+
+}
+
+table {
+  width: auto;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+td{
+  width: 300px;
+  border-radius: 4px;
+
+}
+.titreTab{
+  background: rgba(45, 161, 212, 0.75);
+}
+.contenuTab{
+  background: rgba(128, 128, 128, 0.75);
+}
+.age{
+  display: inline;
+  line-height: 155px;
+  font-size: 100px;
+  padding: 0px;
+}
+.icone{
+  padding: 20px 0px;
+  font-size: 100px;
+  display: inline-block;
+}
+.iconeSub{
+  display: inline-flex;
+  font-size: 50px;
+}
+.imgDecor{
+  text-align: center;
+}
+.imgDecor img{
+  width: 300px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+}
+
+
+.btnMissions{
+  border: 2px solid white;
+  border-radius: 4px;
+  width: 300px;
+  margin: 0 auto;
+  padding: 0px 10px;
+  background: rgba(128, 128, 128, 0.75);
+  text-align: center;
+  display: block;
+  margin-top: 50px;
+  transition: all 0.3s ease;
+}
+.btnMissions a{
+  text-align: center;
+  display: inline-flex;
+  text-decoration: none;
+  color: white;
+}
+.btnMissions:hover{
+  cursor: pointer;
+  background: #2DA1D4;
+}
+
+
+.basPage{
+  padding: 10px 0px;
+  margin-top: 50px;
+  width:100%;
+  background-image: linear-gradient(to right, purple ,#2DA1D4 );
+
+}
+.menuBasPage{
+  display: inline;
+  text-align: center;
+}
+
+
+.menuBasPage a{
+  font-family: sans-serif;
+  font-size: 17px;
+  padding: 0px 10px;
+  text-decoration: none;
+  color: white;
+  display: inline-flex;
+  transition: all 0.3s ease;
+}
+.menuBasPage a:hover{
+  cursor: pointer;
+  color: black;
+}
+
+.basPage p{
+  color:white;
+  text-align:center;
+}
+.reseaux{
+  line-height: 50px;
+  font-size: 40px;
+  display: block;
+  text-align: center;
+}
+.reseaux a{
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+  }
+  .reseaux a:hover{
+  cursor: pointer;
+  color: black;
+  }
+.copyright{
+  line-height: 30px;
+}
+.copyright a{
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+.copyright a:hover{
+  cursor: pointer;
+  color: black;
+}
+
+@media screen and (max-width:500px) {
+  .contenuTextuel h2{
+    text-align: center;
+  }

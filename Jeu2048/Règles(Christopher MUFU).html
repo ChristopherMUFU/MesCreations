@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+  <head>
+      <meta charset="utf-8"/>
+      <link rel="stylesheet" href="MonStyle(Christopher MUFU).css"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <title>I Love 2048</title>
+  </head>
+
+  <body>
+
+<!-- Haut de la page contenant le logo et le menu -->
+
+      <header class="hautPage">
+        <div class="logo">
+            <a  href="Accueil(Christopher MUFU).html"><h1>I Love 2048</h1></a>
+        </div>
+        <nav class="menu">
+            <div class="elementMenu">
+                <a href="DeuxMilleQuaranteHuit(Christopher MUFU).zip" download><h3>Télécharger</h3></a>
+            </div>
+            <div class="elementMenu">
+                <a href="Accueil(Christopher MUFU).html"><h3>Accueil</h3></a>
+            </div>
+            <div class="elementMenu">
+                <a href="MonProjet(Christopher MUFU).html"><h3>Développement</h3></a>
+            </div>
+        </nav>
+      </header>
+
+
+  <!-- Contenu de la page -->
+
+      <div class="contenuTextuel">
+
+          <h1>Les Règles du jeu</h1>
+          <p class="ligne"></p>
+              <p class="texte">
+                  Vous voulez vous lancer sur le jeu et tenter d'atteindre ce fameux 2048 ?
+                  Ils vous faudra tout d'abord bien comprendre les règles du jeu afin de maximiser
+                  vos chances de réussite, également nos secrets tips vous permetteront même d'aller
+                  plus loin ! Donc posez vous et soyez attentif.
+              </p>
+
+
+          <h2>Comment se joue le 2048 ?</h2>
+              <p class="texte">
+                  Le 2048 classique se joue sur une grille de configuration en quatre fois quatre ou sont
+                  disposé parmis les cases disponibles des puissance de deux, c'est à dire 2 puis 4, 8, 16
+                  en mulitipliant à chaque fois la valeur par deux.
+                  Au début du jeu, seule deux cases de la grille seront remplis par la puissance de deux la plus
+                  faible, la valeur 2. L'objectif sera de rassembler les deux puissances de deux en une seule case,
+                  formant la puissance de deux au dessus.
+                  Pour pouvoir rassembler deux puissances de deux identiques, quatre mouvement vous seront autorisée,
+                  ils correspondent au quatre touches directionnelles sur votre clavier, c'est à dire les mouvements de
+                  de gauche à droite / droite à gauche et de haut en bas / bas en haut.
+                  Il faut savoir qu'après chaque mouvement réalisé, une puissande de deux entre 2 et 4 apparait aléatoirement
+                  sur une des cases disponibles de la grille. Si toutes les cases de la grille sont remplies et qu'il vous est
+                  imposible de rassembler deux puissance de deux identiques, alors la partie se termine.
+                  <br><br>
+                  Nous te proposons un exemple pour mettre en lumière nos propos :
+                  <br><br>
+            </p>
+
+
+                <table>
+                    <p class="elementTab">Il faut ici assembler les 2 avec la direction haut/bas</p>
+                    <tr> <td></td> <td></td> <td></td> <td><p></p></td> </tr>
+                    <tr> <td></td> <td></td> <td></td> <td><p></p></td> </tr>
+                    <tr> <td></td> <td></td> <td></td> <td><p>2</p></td> </tr>
+                    <tr> <td></td> <td></td> <td></td> <td><p>2</p></td> </tr>
+                </table>
+
+
+                <table>
+                    <p class="elementTab">
+                        Les 2 assemblés ont formé un 4 (puissance au dessus), et nous avons également
+                        l'apparition d'un nouveau 2 parmis les cases vides.
+                    </p>
+                    <tr> <td></td> <td><p class="exempleR">2</p></td> <td></td> <td><p></p></td> </tr>
+                    <tr> <td></td> <td></td> <td></td> <td><p></p></td> </tr>
+                    <tr> <td></td> <td></td> <td></td> <td><p></p></td> </tr>
+                    <tr> <td></td> <td></td> <td></td> <td><p class="exempleV">4</p></td> </tr>
+                </table>
+
+
+
+            <p class="texte">
+                Ainsi comme tu as pu le voir sur l'exemple, le jeu se résume à rassembler des puissances de deux identiques
+                devenant de plus en plus grande durant l'avancée de ta partie, tout cela jusqu'à atteindre 2048 !
+                Il est néanmoins possible de continuer la partie après avoir atteint 2048, et donc il possible de former
+                des valeurs encore plus grandes ! Si c'est ce que tu recherche nos secrets tips sont là pour t'aider.
+            </p>
+
+          <h2>Nos secrets tips !</h2>
+            <p class="texte">
+                Atteindre 2048 voir plus peut s'avèrer très complexe sans une bonne méthode en tête. Nous tacherons de
+                remédier à cela en te proposant une méthode très efficace pour accumuler les grandes valeurs.
+                Cette méthode consiste à durant la partie d'essayer de garder une configuration en "serpentin" quant à
+                l'agencement des cases de la grille. Cette configuration consiste à tout d'abord choisir une des quatres
+                cases situées au coin de la grille, la case choisi contiendra la valeur la plus haute de la grille,
+                case qu'on appelera "H" afin de rendre l'explication plus claire. Ainsi la case issue de la symétrie
+                axiale de la case H sera la case contenant la plus petite valeur de la grille qu'on appelera "P".
+                L'objectif sera de disposer les cases H et P via des zigzag horizontaux ou verticaux recouvrant ensemble
+                de la grille, ce qui vous permettera en plus cela de voir plus claire sur l'avancée de votre partie
+              <br><br>
+              Un exemple s'impose :
+           </p>
+
+              <table>
+                  <tr> <td><p>_</p></td> <td><p>_</p></td> <td><p>_</p></td> <td><p>H</p></td> </tr>
+                  <tr> <td><p>|</p></td> <td><p>_</p></td> <td><p>_</p></td> <td><p>_</p></td> </tr>
+                  <tr> <td><p>_</p></td> <td><p>_</p></td> <td><p>_</p></td> <td><p>|</p></td> </tr>
+                  <tr> <td><p>|</p></td> <td><p>_</p></td> <td><p>_</p></td> <td><p>P</p></td> </tr>
+              </table>
+
+            <p class="elementTab">
+                Suivant cette méthode vous serez en mesure de atteindre le 2048 voir au-dela !
+                Il est désormais tant pour vous de tester notre 2048, A vous de jouer !
+            </p>
+
+            <div class="liens">
+                <a href="DeuxMilleQuaranteHuit(Christopher MUFU).zip" download><p>Télécharger le jeu</p></a>
+            </div>
+            <br>
+
+      </div>
+
+
+
+  <!-- Bas de page -->
+
+      <footer class="basPage">
+
+        <div class="menuBasPage">
+          <h3>
+            <a href="Accueil(Christopher MUFU).html">Accueil</a>
+            <a href="DeuxMilleQuaranteHuit(Christopher MUFU).zip" download>Télécharger</a>
+            <a href="MonProjet(Christopher MUFU).html">Développement</a>
+          </h3>
+        </div>
+
+        <div class="copyright">
+           <p>copyright@ChristopherMufu2019</p>
+        </div>
+
+      </footer>
+
+  </body>
+</html>

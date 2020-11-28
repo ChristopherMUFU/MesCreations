@@ -1,0 +1,487 @@
+body{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  background-color: black;
+}
+
+
+.hautPage{
+  background-image: linear-gradient(to right, purple ,#2DA1D4 );
+  padding: 20px;
+}
+.hautPage a{
+  text-decoration: none;
+  color: white;
+  font-family: sans-serif;
+}
+
+
+
+
+.logo{
+  display: inline-flex;
+}
+.imglogo{
+  width: 110px;
+  display: inline-flex;
+  float: left;
+}
+.txtlogo{
+}
+
+
+
+.menu{
+  text-align: center;
+  line-height: 36px;
+  display: inline-flex;
+  float: right;
+  position: absolute;
+  margin: 0px 20px;
+}
+
+.menu a{
+  /*border: 2px solid white;
+  border-radius: 50%;*/
+  text-transform: uppercase;
+  font-family: "montserrat", sans-serif;
+  padding: 0px 10px;
+  margin: 10px 0px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+.menu a:hover{
+  cursor: pointer;
+  color: #2DA1D4;
+}
+
+
+.show-menu-btn,.hide-menu-btn{
+  color: white;
+  transition: 0.3s;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+
+}
+.show-menu-btn{
+  float: right;
+}
+.hide-menu-btn i{
+  line-height: 70px;
+}
+.show-menu-btn i{
+  line-height: 70px;
+
+}
+.show-menu-btn:hover{
+  color: black;
+}
+.hide-menu-btn:hover{
+  color: #2DA1D4;
+}
+#chk{
+  position: absolute;
+  visibility: hidden;
+  z-index: -1111;
+}
+
+
+@media screen and (max-width:10000px) {
+  .show-menu-btn,.hide-menu-btn{
+    display: block;
+  }
+  .menu{
+    position: fixed;
+    width: 95%;
+    height: 100vh;
+    background: #333;
+    right: -100%;
+    top: 0;
+    text-align: center;
+    padding-left: 80px 0px;
+    line-height: normal;
+    transition: 0.7s;
+    display: block;
+    padding-top: 40px;
+  }
+  .hide-menu-btn{
+    position: absolute;
+    top: 20px;
+    right: 40px;
+  }
+  #chk:checked ~ .menu{
+    right: 0;
+
+  }
+
+}
+
+
+
+
+.titre{
+  margin-left: 10%;
+  margin-right: 10%;
+  color: white;
+  font-family: sans-serif;
+
+}
+
+.ligneTitre{
+  margin-left: 10%;
+  margin-right: 10%;
+  border: 1px solid #2DA1D4;
+  background-color: #2DA1D4;
+  margin-bottom: 70px;
+}
+.évènementForm h2{
+  margin-left: 10%;
+  margin-right: 10%;
+  color: white;
+  font-family: sans-serif;
+  padding: 0px 10px;
+  background: #4E8AD8;
+
+}
+
+
+.texte{
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+}
+.infos{
+  text-align: center;
+  padding-bottom: 30px;
+}
+.infos table {
+  width: auto;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.infos td{
+  width: 300px;
+  border-radius: 4px;
+
+}
+.titreTab{
+  background: rgba(45, 161, 212, 1);
+}
+.contenuTab{
+  background: rgba(128, 128, 128, 1);
+}
+.prixFixe{
+  display: inline;
+  line-height: 155px;
+  font-size: 40px;
+  padding: 0px;
+}
+
+.choixEvenement{
+  margin-left: 10%;
+  margin-right: 10%;
+  color: white;
+  font-family: sans-serif;
+}
+.bouttonsEvent{
+  width: auto;
+  text-align: center;
+}
+.choixEvenement h3{
+  /*background: rgba(78, 138, 216, 0.5);*/
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.choixEvenement label{
+  cursor: pointer;
+}
+
+.choixEvenement label input[type="checkbox"]{
+  display: none;
+}
+.choixEvenement label span{
+  color: white;
+  display: inline-flex;
+  user-select: none;
+  border: 2px solid white;
+  border-radius: 4px;
+  padding: 20px 10px;
+  margin: 0px 0px;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.choixEvenement label span:hover{
+  cursor: pointer;
+  background: #2DA1D4;
+}
+.choixEvenement label input[type="checkbox"]:checked ~ span{
+  background: purple;
+}
+
+
+table{
+  text-align: center;
+  color: white;
+  font-family: sans-serif;
+}
+
+.calEvenementS1, .calEvenementS2 {
+  margin: 0 auto;
+  flex-direction: column;
+  padding-bottom: 70px;
+}
+.calEvenementS2{
+  padding: 5%;
+}
+
+
+
+.titreTab1, .titreTab2{
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+  color: white;
+  /*background: rgba(78, 138, 216, 0.5);*/
+  font-family: sans-serif;
+}
+
+.titreTab2{
+  display: none;
+}
+.infosTab{
+  background: #2DA1D4;
+}
+
+
+.calEvenementS1 td{
+  max-width: 100px;
+  border-radius: 4px;
+  height: 70px;
+  text-align: center;
+}
+.calEvenementS2 td{
+  max-width: 80px;
+  border-radius: 4px;
+  height: 70px;
+  text-align: center;
+}
+
+.Dispo{
+  border: 2px solid white;
+}
+.Ndispo{
+  background: grey;
+}
+
+.calEvenementS1 label, .calEvenementS2 label{
+  cursor: pointer;
+  }
+.calEvenementS1 label input[type="checkbox"], .calEvenementS2 label input[type="checkbox"]{
+  display: none;
+}
+.calEvenementS1 label span{
+  padding: 27px 11px;
+  user-select: none;
+  transition: all 0.3s ease;
+  }
+.calEvenementS2 label span{
+  text-align: center;
+  padding: 27px 2px;
+  user-select: none;
+  transition: all 0.3s ease;
+  }
+
+.calEvenementS1 label span:hover, .calEvenementS2 label span:hover{
+  cursor: pointer;
+  background: #2DA1D4;
+  }
+.calEvenementS1 label input[type="checkbox"]:checked ~ span, .calEvenementS2 label input[type="checkbox"]:checked ~ span{
+  background: purple;
+}
+
+
+
+
+
+.calEvenementS2{
+  max-width: 450px;
+  margin: 0 auto;
+  display: none;
+}
+
+
+.texteValidation{
+  margin: 0px 10%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.validation{
+  margin-bottom: 40px;
+}
+.okValide{
+  margin: 0px 10%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+  display: none;
+}
+.validation label{
+  cursor: pointer;
+}
+
+.validation label input[type="checkbox"]{
+  display: none;
+}
+.validation label span p{
+  display: none;
+  transition: all 0.7s ease;
+}
+.validation label span{
+  text-align: center;
+  user-select: none;
+  padding: 20px 10px;
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+  border: 2px solid white;
+  border-radius: 4px;
+  color: white;
+  font-family: sans-serif;
+  transition: all 0.3s ease;
+}
+
+.validation label span:hover{
+  cursor: pointer;
+  background: #2DA1D4;
+}
+.validation label input[type="checkbox"]:checked ~ span{
+  background: purple;
+
+}
+.validation label input[type="checkbox"]:checked ~ span p{
+  display: block;
+}
+
+
+
+
+
+
+.basPage{
+  padding: 10px 0px;
+  margin: 0px;
+  width:100%;
+  background-image: linear-gradient(to right, purple ,#2DA1D4 );
+}
+.menuBasPage{
+  display: inline;
+  text-align: center;
+}
+
+
+.menuBasPage a{
+  font-family: sans-serif;
+  font-size: 17px;
+  padding: 0px 10px;
+  text-decoration: none;
+  color: white;
+  display: inline-flex;
+  transition: all 0.3s ease;
+}
+.menuBasPage a:hover{
+  cursor: pointer;
+  color: black;
+}
+
+.basPage p{
+  color:white;
+  text-align:center;
+}
+.reseaux{
+  line-height: 50px;
+  font-size: 40px;
+  display: block;
+  text-align: center;
+}
+.reseaux a{
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+.reseaux a:hover{
+  cursor: pointer;
+  color: black;
+}
+.copyright{
+  line-height: 30px;
+}
+.copyright a{
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+.copyright a:hover{
+  cursor: pointer;
+  color: black;
+}
+
+@media screen and (max-width:800px) {
+  .titre{
+    text-align: center;
+  }
+  .évènementForm h2{
+    text-align: center;
+  }
+  .texte{
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: justify;
+  }
+
+  .infos table {
+    padding-bottom: 30px;
+  }
+
+  .titreTab1{
+    display: none;
+  }
+  .calEvenementS1{
+    display: none;
+  }
+  .titreTab2{
+    display: block;
+  }
+  .calEvenementS2{
+    display: block;
+
+  }
+  .texteValidation{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+
+}
+
+@media screen and (max-width:600px) {
+  .contenuTextuel h2, .titre{
+    text-align: center;
+  }

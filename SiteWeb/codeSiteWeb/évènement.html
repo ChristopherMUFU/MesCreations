@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="CSSprojetWeb/évènement.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    <title>Créer ton évènement</title>
+  </head>
+
+  <body>
+
+<!-- Haut de la page contenant le logo et le menu -->
+
+    <header class="hautPage">
+      <div class="logo">
+        <a href="accueil.html"><img class="imglogo" src="PhotoSiteWeb/LogoProjetWeb.png" alt=""></a>
+        <a class="txtlogo" href="#"><h1>Ultimate Escape</h1></a>
+      </div>
+
+      <input type="checkbox" id="chk">
+      <label for="chk" class="show-menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+
+
+<!-- Menu de la page -->
+
+      <div class="menu">
+        <div class="elementMenu">
+          <a href="accueil.html"><h3>Accueil</h3></a>
+        </div>
+        <div class="elementMenu">
+          <a href="missions.html"><h3>Nos missions</h3></a>
+        </div>
+        <div class="elementMenu">
+            <a href="galerie.html"><h3>Galerie Photo</h3></a>
+        </div>
+        <div class="elementMenu">
+            <a href="quisommesnous.html"><h3>Qui sommes nous?</h3></a>
+        </div>
+        <div class="elementMenu">
+          <a href="nousrejoindre.html"><h3>Nous rejoindre</h3></a>
+        </div>
+        <label for="chk" class="hide-menu-btn">
+          <i class="fas fa-times"></i>
+        </label>
+      </div>
+    </header>
+
+
+    <div class="évènementForm">
+
+      <div class="titre">
+        <h1>Créer ton évènement !</h1>
+      </div>
+      <div class="ligneTitre">
+      </div>
+
+      <h2>Comment créer son évènements ?</h2>
+
+      <div class="texte">
+        <p>
+          Pour créer votre évènement, il faudra suivre attentivement le formulaire. Chose à savoir, lors de votre création d'évènement,
+          une des salles des locaux de Ultimate Escape vous sera réservée, de quoi boire et grignoter vous sera également fourni. Vous êtes
+          en possiblité de ramener votre propre nourriture ou materiels pour l'occasion tant celui ne dégradent pas la salle fourni et
+          qu'ils ne nuisent pas à l'immersion des autres joueurs.
+        </p>
+      </div>
+
+      <h2>Nos tarifs</h2>
+
+      <div class="infos">
+
+          <table>
+            <tr><td class="titreTab"><h3>Pour 10 personnes</h3></td> </tr>
+            <tr><td class="contenuTab">
+              <p class="prixFixe">15€/pers.</p>
+              <p>Soit un prix fixe de 150€</p></td></tr>
+          </table>
+
+          <table>
+            <tr><td class="titreTab"><h3>Pour 20 personnes</h3></td> </tr>
+            <tr><td class="contenuTab">
+              <p class="prixFixe">10€/pers.</p>
+              <p>Soit un prix fixe de 200€</p></td></tr>
+          </table>
+
+          <table>
+            <tr><td class="titreTab"><h3>Pour 30 personnes</h3></td></tr>
+            <tr><td class="contenuTab">
+              <p class="prixFixe">8,35€/pers.</p>
+              <p>Soit un prix fixe de 250€</p>
+            </td></tr>
+          </table>
+
+      </div>
+      <br><br>
+
+      <h2>Créer son évènements</h2>
+
+      <div class="texte">
+        <p>
+          Afin de mener au mieux votre création d'évènement, veuillez selectionner une réponse et une seule
+          pour chaque question proposés. Dès que votre sélection a bien été effectuer, appuyer alors sur la touche Valider.
+        </p>
+      </div>
+
+      <div class="choixEvenement">
+        <h3>Choisissez votre évènement.</h3>
+        <div class="bouttonsEvent">
+            <label>
+              <input type="checkbox">
+              <span>Anniversaire</span>
+            </label>
+
+            <label>
+              <input type="checkbox">
+              <span>Enterrement de vie de graçon / jeune fille</span>
+            </label>
+
+            <label>
+              <input type="checkbox">
+              <span>Team Building</span>
+            </label>
+        </div>
+      </div>
+       <br><br>
+
+
+
+<!-- Tableau au format ordinateur -->
+
+      <table class="calEvenementS1">
+
+        <div class="titreTab1">
+          <h3>Calendrier des évènements <br> semaine du 16 au 22 Dec.</h3>
+
+        </div>
+        <tr> <td class="infosTab">Heure des séances</td> <td class="infosTab">Lundi</td> <td class="infosTab">Mardi</td> <td class="infosTab">Mercredi</td>
+          <td class="infosTab">Jeudi</td> <td class="infosTab">Vendredi</td> <td class="infosTab">Samedi</td> <td class="infosTab">Dimanche</td> </tr>
+
+        <tr> <td class="infosTab">9h - 12h</td>  <td class="Dispo"><label><input type="checkbox"><span>Disponible</span></label></td> <td class="Ndispo"><p>Non disponible</p></td>
+                                                 <td class="Dispo"><label><input type="checkbox"><span>Disponible</span></label></td> <td class="Dispo"><label><input type="checkbox"><span>Disponible</span></label></td>
+                                                 <td class="Ndispo"><p>Non disponible</p></td> <td class="Ndispo"><p>Non disponible</p></td>
+                                                 <td class="Dispo"><label><input type="checkbox"><span>Disponible</span></label></td>
+
+        <tr> <td class="infosTab">12h - 15h</td> <td class="Ndispo"><p>Non disponible</p></td> <td class="Dispo"><label><input type="checkbox"><span>Disponible</span></label></td>
+                                                 <td class="Ndispo"><p>Non disponible</p></td> <td class="Dispo"><label><input type="checkbox"><span>Disponible</span></label></td>
+                                                 <td class="Dispo"><label><input type="checkbox"><span>Disponible</span></label></td> <td class="Ndispo"><p>Non disponible</p></td>
+                                                 <td class="Dispo"><label><input type="checkbox"><span>Disponible</span></label></td>
+
+        <tr> <td class="infosTab">15h - 18h</td> <td class="Ndispo"><p>Non disponible</p></td> <td class="Dispo"><label><input type="checkbox"><span>Disponible</span></label></td>
+                                                 <td class="Ndispo"><p>Non disponible</p></td> <td class="Ndispo"><p>Non disponible</p></td>
+                                                 <td class="Ndispo"><p>Non disponible</p></td> <td class="Ndispo"><p>Non disponible</p></td>
+                                                 <td class="Ndispo"><p>Non disponible</p></td>
+
+        <tr> <td class="infosTab">18h - 21h</td> <td class="Dispo"><label><input type="checkbox"><span>Disponible</span></label></td> <td class="Dispo"><label><input type="checkbox"><span>Disponible</span></label></td>
+                                                 <td class="Ndispo"><p>Non disponible</p></td> <td class="Dispo"><label><input type="checkbox"><span>Disponible</span></label></td>
+                                                 <td class="Ndispo"><p>Non disponible</p></td> <td class="Ndispo"><p>Non disponible</p></td>
+                                                 <td class="Ndispo"><p>Non disponible</p></td>
+
+      </table>
+
+
+<!-- Tableau au format portable -->
+
+
+      <table class="calEvenementS2">
+
+        <div class="titreTab2">
+          <h3>Calendrier des évènements <br> semaine du 16 au 22 Dec.</h3>
+        </div>
+
+        <tr> <td class="infosTab">Heure des séances</td> <td class="infosTab">9h - 12h</td> <td class="infosTab">12h - 15h</td>
+                                                         <td class="infosTab">15h - 18h</td> <td class="infosTab">18h - 21h</td> </tr>
+
+        <tr> <td class="infosTab">Lundi</td>    <td class="Dispo"><label><input type="checkbox"><span>Disponible</span></label></td> <td class="Ndispo"><p>Non disponible</p></td>
+                                                <td class="Ndispo"><p>Non disponible</p></td> <td class="Dispo"><label><input type="checkbox"><span>Disponible</span></label></td> </tr>
+
+        <tr> <td class="infosTab">Mardi</td>    <td class="Ndispo"><p>Non disponible</p></td> <td class="Dispo"><label><input type="checkbox"><span>Disponible</span></label></td>
+                                                <td class="Dispo"><label><input type="checkbox"><span>Disponible</span></label></td> <td class="Dispo"><label><input type="checkbox"><span>Disponible</span></label></td> </tr>
+
+        <tr> <td class="infosTab">Mercredi</td> <td class="Dispo"><label><input type="checkbox"><span>Disponible</span></label></td> <td class="Ndispo"><p>Non disponible</p></td>
+                                                <td class="Ndispo"><p>Non disponible</p></td> <td class="Ndispo"><p>Non disponible</p></td> </tr>
+        <tr> <td class="infosTab">Jeudi</td>    <td class="Dispo"><label><input type="checkbox"><span>Disponible</span></label></td> <td class="Dispo"><label><input type="checkbox"><span>Disponible</span></label></td>
+                                                <td class="Ndispo"><p>Non disponible</p></td> <td class="Dispo"><label><input type="checkbox"><span>Disponible</span></label></td> </tr>
+
+        <tr> <td class="infosTab">Vendredi</td> <td class="Ndispo"><p>Non disponible</p></td> <td class="Dispo"><label><input type="checkbox"><span>Disponible</span></label></td>
+                                                <td class="Ndispo"><p>Non disponible</p></td> <td class="Ndispo"><p>Non disponible</p></td> </tr>
+
+        <tr> <td class="infosTab">Samedi</td>   <td class="Ndispo"><p>Non disponible</p></td> <td class="Ndispo"><p>Non disponible</p></td>
+                                                <td class="Ndispo"><p>Non disponible</p></td> <td class="Ndispo"><p>Non disponible</p></td> </tr>
+
+        <tr> <td class="infosTab">Dimanche</td> <td class="Dispo"><label><input type="checkbox"><span>Disponible</span></label></td> <td class="Dispo"><label><input type="checkbox"><span>Disponible</span></label></td>
+                                                <td class="Ndispo"><p>Non disponible</p></td> <td class="Ndispo"><p>Non disponible</p></td> </tr>
+
+      </table>
+
+
+
+
+      <div class="choixEvenement">
+        <div class="">
+          <h3>Pour combien de personnes souaitez-vous réaliser cette évenement ?</h3>
+        </div>
+
+
+        <div class="bouttonsEvent">
+          <label>
+            <input type="checkbox">
+            <span>10 pers</span>
+          </label>
+
+          <label>
+            <input type="checkbox">
+            <span>20 pers</span>
+          </label>
+
+          <label>
+            <input type="checkbox">
+            <span>30 pers</span>
+          </label>
+        </div>
+
+      </div>
+       <br><br>
+
+
+
+
+      <div class="texteValidation">
+        <p>
+          Vous avez un évèvenement, la date et l'heure ainsi que  le nombre de personnes ?
+          Si c'est le cas vous pouvez appuyer sur la touche Valider afin d'enregitrer votre demande.
+        </p>
+      </div>
+
+      <div class="validation">
+        <label>
+          <input type="checkbox">
+          <span> Valider
+            <p>
+            Merci d'avoir bien suivi nos intructions, votre demande a été prise en compte. Le paiment sera
+            à effectuer sur place à la date et heure selectionner.
+          </p>
+        </span>
+        </label>
+      </div>
+
+
+
+
+
+<!-- Bas de la page -->
+
+<footer class="basPage">
+  <div class="menuBasPage">
+    <h3>
+      <a href="accueil.html">Accueil</a>
+      <a href="missions.html">Nos missions</a>
+      <a href="#">Galerie Photo</a>
+      <a href="#">Qui sommes nous?</a>
+      <a href="#">Nous rejoindre</a>
+    </h3>
+  </div>
+  <div class="reseaux">
+    <label for="" class="twitter">
+      <a href="#"><i class="fab fa-twitter-square"></i></a>
+    </label>
+    <label for="" class="facebook">
+      <a href="#"><i class="fab fa-facebook-square"></i></a>
+    </label>
+  </div>
+  <div class="copyright">
+     <p>copyright@UltimateEscape2019  -  <a href="#">Mentions légales</a></p>
+  </div>
+</footer>
+</body>
+</html>

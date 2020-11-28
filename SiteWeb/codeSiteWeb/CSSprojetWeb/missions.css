@@ -1,0 +1,286 @@
+body{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  background-color: black;
+}
+
+/* Haut de la page: Logo et menu */
+
+.hautPage{
+  background-image: linear-gradient(to right, purple ,#2DA1D4 );
+  padding: 20px;
+}
+.hautPage a{
+  text-decoration: none;
+  color: white;
+  font-family: sans-serif;
+}
+
+
+.logo{
+  text-align: center;
+  display: inline-flex;
+}
+.imglogo{
+  width: 110px;
+  display: inline-flex;
+  float: left;
+}
+.txtlogo{
+}
+
+
+
+.menu{
+  text-align: center;
+  line-height: 36px;
+  display: inline-flex;
+  float: right;
+  position: absolute;
+  margin: 0px 20px;
+}
+
+.menu a{
+  text-transform: uppercase;
+  font-family: "montserrat", sans-serif;
+  padding: 0px 10px;
+  margin: 10px 0px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+.menu a:hover{
+  cursor: pointer;
+  color: #2DA1D4;;
+}
+
+
+.show-menu-btn,.hide-menu-btn{
+  color: white;
+  transition: 0.3s;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+
+}
+.show-menu-btn{
+  float: right;
+}
+.hide-menu-btn i{
+  line-height: 70px;
+}
+.show-menu-btn i{
+  line-height: 70px;
+
+}
+.show-menu-btn:hover{
+  color: black;
+}
+.hide-menu-btn:hover{
+  color: #2DA1D4;
+}
+#chk{
+  position: absolute;
+  visibility: hidden;
+  z-index: -1111;
+}
+
+
+@media screen and (max-width:10000px) {
+  .show-menu-btn,.hide-menu-btn{
+    display: block;
+  }
+  .menu{
+    position: fixed;
+    width: 95%;
+    height: 100vh;
+    background: #333;
+    z-index: 1111;
+    right: -100%;
+    top: 0;
+    text-align: center;
+    padding-left: 80px 0px;
+    line-height: normal;
+    transition: 0.7s;
+    display: block;
+    padding-top: 40px;
+  }
+  .hide-menu-btn{
+    position: absolute;
+    top: 20px;
+    right: 40px;
+  }
+  #chk:checked ~ .menu{
+    right: 0;
+
+  }
+
+}
+
+/* Contenu de la page */
+
+.catalogue{
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-bottom: 30px;
+  color: white;
+  font-family: sans-serif;
+}
+.ligne{
+  border: 1px solid #2DA1D4;
+  background-color: #2DA1D4;
+}
+.choixCatalogue{
+  margin: 100px 0px;
+}
+.titreMissions{
+  border: 1px solid #4E8AD8;
+  background-color: #4E8AD8;
+}
+.imgMissions{
+  width: 100%;
+  max-width: 400px;
+  min-width: 100px;
+}
+
+.texteMissions{
+  text-align: justify;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.contenuMissions{
+  display: inline-flex;
+}
+
+.btnMissions{
+  border: 2px solid white;
+  border-radius: 4px;
+  padding: 0px 10px;
+  margin-top: 12%;
+  margin-left: 70%;
+  display: inline-flex;
+  transition: all 0.3s ease;
+  position: absolute;
+  float: right;
+}
+.btnMissions a{
+  text-decoration: none;
+  display: inline-flex;
+  text-align: center;
+  color: white;
+}
+.btnMissions:hover{
+  cursor: pointer;
+  background: #2DA1D4;
+}
+
+
+@media screen and (max-width: 950px){
+  .contenuMissions{
+    display: inline-block;
+  }
+  .titreMissions{
+    text-align: center;
+  }
+  .texteMissions{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .btnMissions{
+    margin: 10px 0px;
+    position: relative;
+  }
+
+}
+
+
+.texte{
+  color: white;
+  font-family: sans-serif;
+  border: 5px;
+  text-align: center;
+}
+
+.texte p{
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.btnTexte{
+  border: 2px solid white;
+  border-radius: 4px;
+  padding: 0px 10px;
+  margin: 30px 0px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+.btnTexte a{
+  text-decoration: none;
+  display: inline-flex;
+  text-align: center;
+  color: white;
+}
+.btnTexte:hover{
+  cursor: pointer;
+  background: #2DA1D4;
+}
+
+
+.basPage{
+  padding: 10px 0px;
+  margin: 0px;
+  width:100%;
+  background-image: linear-gradient(to right, purple ,#2DA1D4 );
+}
+.menuBasPage{
+  display: inline;
+  text-align: center;
+}
+
+
+.menuBasPage a{
+  font-family: sans-serif;
+  font-size: 17px;
+  padding: 0px 10px;
+  text-decoration: none;
+  color: white;
+  display: inline-flex;
+  transition: all 0.3s ease;
+}
+.menuBasPage a:hover{
+  cursor: pointer;
+  color: black;
+}
+
+.basPage p{
+  color:white;
+  text-align:center;
+}
+.reseaux{
+  line-height: 50px;
+  font-size: 40px;
+  display: block;
+  text-align: center;
+}
+.reseaux a{
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+  }
+  .reseaux a:hover{
+  cursor: pointer;
+  color: black;
+  }
+.copyright{
+  line-height: 30px;
+}
+.copyright a{
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+.copyright a:hover{
+  cursor: pointer;
+  color: black;
+}

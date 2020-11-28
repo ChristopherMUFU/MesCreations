@@ -1,0 +1,273 @@
+body{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  background-color: black;
+
+}
+
+
+.hautPage{
+  background-image: linear-gradient(to right, purple ,#2DA1D4 );
+  padding: 20px;
+
+}
+
+
+.hautPage a{
+  text-decoration: none;
+  color: white;
+  font-family: sans-serif;
+}
+
+
+/* Style Logo de la page */
+
+.logo{
+  text-align: center;
+  display: inline-flex;
+  margin: auto;
+}
+.imglogo{
+  width: 110px;
+  display: inline-block;
+}
+.txtlogo{
+  text-align:center
+}
+
+
+/* Style menu */
+
+.menu{
+  text-align: center;
+  line-height: 36px;
+  display: inline-flex;
+  float: right;
+  position: absolute;
+  margin: 0px 20px;
+}
+
+.menu a{
+  /*border: 2px solid white;
+  border-radius: 50%;*/
+  text-transform: uppercase;
+  font-family: "montserrat", sans-serif;
+  padding: 0px 10px;
+  margin: 10px 0px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+.menu a:hover{
+  cursor: pointer;
+  color: #2DA1D4;
+}
+
+.show-menu-btn,.hide-menu-btn{
+  color: white;
+  transition: 0.3s;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+
+}
+.show-menu-btn{
+  float: right;
+}
+.hide-menu-btn i{
+  line-height: 70px;
+}
+.show-menu-btn i{
+  line-height: 80px;
+
+}
+.show-menu-btn:hover{
+  color: black;
+}
+.hide-menu-btn:hover{
+  color: #2DA1D4;
+}
+#chk{
+  position: absolute;
+  visibility: hidden;
+  z-index: -1111;
+}
+
+@media screen and (max-width:10000px) {
+  .show-menu-btn,.hide-menu-btn{
+    display: block;
+  }
+  .menu{
+    position: fixed;
+    width: 95%;
+    height: 100vh;
+    background: #333;
+    right: -100%;
+    top: 0;
+    text-align: center;
+    padding-left: 80px 0px;
+    line-height: normal;
+    transition: 0.7s;
+    display: block;
+    padding-top: 40px;
+  }
+  .hide-menu-btn{
+    position: absolute;
+    top: 20px;
+    right: 40px;
+  }
+  #chk:checked ~ .menu{
+    right: 0;
+
+  }
+
+}
+.contenuTextuel{
+  margin-left: 10%;
+  margin-right: 10%;
+  font-family: sans-serif;
+  color: white;
+}
+.texte{
+  text-align: center;
+}
+
+
+.ligneTitre{
+  border: 1px solid #2DA1D4;
+  background-color: #2DA1D4;
+  margin-bottom: 100px;
+}
+.contenuTextuel h2{
+  padding: 0px 10px;
+  background: #4E8AD8;
+}
+
+.galMissions{
+  font-family: sans-serif;
+  color: white;
+}
+.galEvenement{
+  font-family: sans-serif;
+  color: white;
+}
+
+.imgMissions, .imgEvenement{
+  text-align: center;
+}
+
+.imgMissions img, .imgEvenement img{
+  width: 300px;
+  height: 200px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+
+.espaceCommentaire{
+
+}
+.ligneCom{
+  border: 0.5px solid #2DA1D4;
+  background-color: #2DA1D4;
+  margin-bottom: 30px;
+}
+.espaceCommentaire input[type="text"], .espaceCommentaire textarea{
+  border: none;
+  border: 1px solid #2DA1D4;
+  border-radius: 4px;
+  background: transparent;
+  outline: none;
+  font-size: 15px;
+  color: white;
+
+}
+.espaceCommentaire input[type="submit"]{
+  border: none;
+  outline: none;
+  background: transparent;
+  border: 2px solid white;
+  font-size: 15px;
+  border-radius: 4px;
+  color: white;
+  padding: 10px 10px;
+  transition: all 0.3s ease;
+
+}
+.espaceCommentaire input[type="submit"]:hover{
+  cursor: pointer;
+  background: purple;
+}
+.com{
+  max-width: 900px;
+  border: 1px solid #2DA1D4;
+  border-radius: 4px;
+  padding: 0px 10px;
+
+}
+
+
+
+
+
+
+
+.basPage{
+  padding: 10px 0px;
+  margin-top: 30px;
+  width:100%;
+  background-image: linear-gradient(to right, purple ,#2DA1D4 );
+}
+.menuBasPage{
+  display: inline;
+  text-align: center;
+}
+.menuBasPage a{
+  font-family: sans-serif;
+  font-size: 17px;
+  padding: 0px 10px;
+  text-decoration: none;
+  color: white;
+  display: inline-flex;
+  transition: all 0.3s ease;
+}
+.menuBasPage a:hover{
+  cursor: pointer;
+  color: black;
+}
+.basPage p{
+  color:white;
+  text-align:center;
+}
+.reseaux{
+  line-height: 50px;
+  font-size: 40px;
+  display: block;
+  text-align: center;
+}
+.reseaux a{
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+  }
+  .reseaux a:hover{
+  cursor: pointer;
+  color: black;
+  }
+.copyright{
+  line-height: 30px;
+}
+.copyright a{
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+.copyright a:hover{
+  cursor: pointer;
+  color: black;
+}
+
+@media screen and (max-width:600px) {
+  .contenuTextuel h2, .titre{
+    text-align: center;
+  }
